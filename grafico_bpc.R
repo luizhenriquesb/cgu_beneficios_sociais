@@ -89,4 +89,8 @@ ggsave("grafico_bpc.jpeg",
        width = 12,
        height = 6,
        dpi = 1000
+<<<<<<< HEAD
 )
+=======
+       )
+>>>>>>> ae8a023c29c92c3bbb0f42a0e0c2a7ed5cc9ee04
