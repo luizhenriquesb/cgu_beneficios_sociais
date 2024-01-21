@@ -54,7 +54,7 @@ dados |>
       size = 14
     ),
     plot.subtitle = element_text(
-      colour = "grey10",
+      colour = "grey20",
       size = 12
     ),
     plot.caption = element_text(
@@ -63,7 +63,7 @@ dados |>
       vjust = 0.01
     ),
     axis.text = element_text(colour = "grey20", face = "bold"),
-    axis.text.x = element_text(angle = 30, hjust = 1),
+    axis.text.x = element_text(size = 10, angle = 30, hjust = 1),
     axis.text.y = element_text(size = 11),
     panel.grid.major.y = element_line(
       color = "grey60",
@@ -85,12 +85,7 @@ dados |>
 
 ggsave("grafico_bpc.jpeg",
        plot = plot,
-       path = "cgu/",
-       width = 12,
+       path = "grafico/",
+       width = 10,
        height = 6,
-       dpi = 1000
-<<<<<<< HEAD
-)
-=======
-       )
->>>>>>> ae8a023c29c92c3bbb0f42a0e0c2a7ed5cc9ee04
+       dpi = 900)
