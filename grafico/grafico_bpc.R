@@ -18,7 +18,7 @@ df <- read_sql(
     bpc.id_municipio, ano_competencia, mes_competencia, pop.populacao'
 )
 
-write_csv(df, "cgu/cgu_bpc")
+# write_csv(df, "dados/cgu_bpc")
 
 dados <- df |>
   mutate(
@@ -41,7 +41,9 @@ dados |>
     date_labels = "%b/%y",
     date_breaks = "3 months"
   ) +
-  scale_y_continuous(labels = scales::percent) +
+  scale_y_continuous(labels = scales::percent,
+                     limits = c(0, .05),
+                     breaks = seq(0, .05, by = 0.01)) +
   labs(
     title = "Beneficío de Prestação Continuada",
     subtitle = "Percentual de beneficiários do município de São Paulo (SP) em relação à população total da cidade",
@@ -81,11 +83,13 @@ dados |>
     plot.background = element_rect(
       fill = "grey100"
     )
-  ) -> plot
+  )
+
+
 
 ggsave("grafico_bpc.jpeg",
        plot = plot,
        path = "grafico/",
        width = 10,
        height = 6,
-       dpi = 900)
+       dpi = 700)
