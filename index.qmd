@@ -69,19 +69,21 @@ O código abaixo gera a visualização gráfica da tabela acima.
 dados |>
   ggplot() +
   aes(x = data, y = perc) +
-  geom_line(colour = "#1351B4", size = 1.25) +
+  geom_line(colour = "#1351B4", size = 1) +
   theme_classic() +
-  ggrepel::geom_label_repel(
-    aes(label = qtde_beneficiarios),
-    max.overlaps = 3,
-    fill = "#1351B4",
-    colour = "grey100"
-  ) +
+  # ggrepel::geom_label_repel(
+  #   aes(label = qtde_beneficiarios),
+  #   max.overlaps = 1,
+  #   fill = "#1351B4",
+  #   colour = "grey100"
+  # ) +
   scale_x_date(
     date_labels = "%b/%y",
     date_breaks = "3 months"
   ) +
-  scale_y_continuous(labels = scales::percent) +
+  scale_y_continuous(labels = scales::percent, 
+                     limits = c(0, .05),
+                     breaks = seq(0, .05, by = 0.01)) +
   labs(
     title = "Beneficío de Prestação Continuada",
     subtitle = "Percentual de beneficiários do município de São Paulo (SP) em relação à população total da cidade",
