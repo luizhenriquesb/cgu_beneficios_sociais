@@ -11,7 +11,7 @@ Esta é uma simples análise gráfica do percentual de beneficiários do Benefí
 
 ## Importação dos dados
 
-O código abaixo faz a importação dos dados com a função {read_sql}, que permite usar a sintaxe do SQL para transformar a base no formato que desejamos. Para mais detalhes sobre como importar os datasets da Base dos Dados para o R, acesse o tutorial produzido pela prória BD [neste link](https://basedosdados.github.io/mais/access_data_packages/#primeiros-passos).
+O código abaixo faz a importação dos dados com a função `{read_sql}`, que permite usar a sintaxe do SQL para transformar a base no formato que desejamos. Para mais detalhes sobre como importar os datasets da Base dos Dados para o R, acesse o tutorial produzido pela prória BD [neste link](https://basedosdados.github.io/mais/access_data_packages/#primeiros-passos).
 
 ```{r, eval=FALSE}
 library(basedosdados)
