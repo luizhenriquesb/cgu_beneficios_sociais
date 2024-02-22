@@ -98,9 +98,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introdução" class="level2">
 <h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
 <p>Esta é uma simples análise gráfica do percentual de beneficiários do Benefício de Prestação Continuada (BPC) no município de São Paulo (SP), ao longo dos anos de 2019 e 2023. Os dados utilizados foram obtidos do <em>datalake</em> da <a href="https://basedosdados.org/dataset/a9a5b35d-2b41-4be5-be07-7256e713ba53?table=182791b4-30f1-4cb4-a80c-c66a611b7934">Base dos Dados (BD)</a>, disponível na Big Query do Google, que, por sua vez, foram extraídos diretamente da <a href="https://portaldatransparencia.gov.br/download-de-dados/bpc">Controladoria Geral da União (CGU)</a>.</p>
-</section>
-<section id="importação-dos-dados" class="level2">
-<h2 class="anchored" data-anchor-id="importação-dos-dados">Importação dos dados</h2>
+<section id="importação-dos-dados" class="level3">
+<h3 class="anchored" data-anchor-id="importação-dos-dados">Importação dos dados</h3>
 <p>O código abaixo faz a importação dos dados com a função <code>{read_sql}</code>, que permite usar a sintaxe do SQL para transformar a base no formato que desejamos. Para mais detalhes sobre como importar os datasets da Base dos Dados para o R, acesse o tutorial produzido pela prória BD <a href="https://basedosdados.github.io/mais/access_data_packages/#primeiros-passos">neste link</a>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(basedosdados)</span>
@@ -131,6 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Município, ano e mês</li>
 </ul></li>
 </ul>
+</section>
 </section>
 <section id="transformação-da-base" class="level2">
 <h2 class="anchored" data-anchor-id="transformação-da-base">Transformação da base</h2>

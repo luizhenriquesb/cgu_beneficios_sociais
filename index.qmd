@@ -9,7 +9,7 @@ editor: visual
 
 Esta é uma simples análise gráfica do percentual de beneficiários do Benefício de Prestação Continuada (BPC) no município de São Paulo (SP), ao longo dos anos de 2019 e 2023. Os dados utilizados foram obtidos do *datalake* da [Base dos Dados (BD)](https://basedosdados.org/dataset/a9a5b35d-2b41-4be5-be07-7256e713ba53?table=182791b4-30f1-4cb4-a80c-c66a611b7934), disponível na Big Query do Google, que, por sua vez, foram extraídos diretamente da [Controladoria Geral da União (CGU)](https://portaldatransparencia.gov.br/download-de-dados/bpc).
 
-## Importação dos dados
+### Importação dos dados
 
 O código abaixo faz a importação dos dados com a função `{read_sql}`, que permite usar a sintaxe do SQL para transformar a base no formato que desejamos. Para mais detalhes sobre como importar os datasets da Base dos Dados para o R, acesse o tutorial produzido pela prória BD [neste link](https://basedosdados.github.io/mais/access_data_packages/#primeiros-passos).
 
